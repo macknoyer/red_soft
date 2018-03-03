@@ -1,0 +1,541 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+* 
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	outline: none
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+a,a:hover
+	text-decoration: none
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+ul,ol
+	list-style: none
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	margin: 0
+h1,h2,h3
+	  color: #000000
+	  font-size: 36px
+h2,h3
+	font-size: 24px
+	line-height: 1
+h3
+	font-size: 18px
+	line-height: 1.33	
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+header
+	height: 80px
+	display: flex
+	align-items: center
+	.logo
+		float: left
+		width: 260px
+		display: block
+		height: 24px
+		background-image: url(../img/logo.svg)
+		background-repeat: no-repeat
+		background-size: contain
+	.header_menu
+		font-size: 18px
+		font-weight: 500
+		text-align: right
+		float: right
+		li
+			display: inline-block
+			margin-right: 40px
+			&.icon
+				font-size: 14px
+				&:last-child
+					margin-right: 0
+			a
+				color: #000000
+				&.active
+					color: $accent
+		&_mobile
+			display: none
+			color: $accent
+			float: right
+			font-size: 40px
+.clearfix:after 
+  content: ""
+  display: table
+  clear: both
+
+label.checkbox
+	display: block
+	padding-left: 40px
+	margin-bottom: 16px
+	cursor: pointer
+	position: relative
+	&:before
+		content: ''
+		width: 20px
+		height: 20px
+		background: url(../img/checkbox-normal.svg) no-repeat
+		display: inline-block
+		position: absolute
+		left: 0
+	&.active:before
+		background: url(../img/checkbox-active.svg) no-repeat
+
+input[type="checkbox"]
+	opacity: 0
+	overflow: hidden
+	position: absolute
+button
+	font-family: $default-font
+.button 
+	color: #fff
+	border: none
+	display: inline-block
+	border-radius: 35.5px
+	padding: 18px 58px 
+	text-align: center
+	background-color: $accent
+	font-weight: 500
+	box-shadow: 0 4px 6px 0 rgba(235, 55, 59, 0.3)
+	&.button_price
+		display: block
+		width: 100%
+		margin-top: 30px
+		font-size: 16px
+		cursor: pointer
+.breadcrumbs_wrap
+	height: 41px
+	background-color: rgba(255,255,255,0.5)
+	position: absolute
+	top: 0
+	width: 100%
+	padding: 7px 0
+
+.banner
+	position: relative
+	height: 657px
+	padding: 138px 0
+	padding-bottom: 0
+	color: #fff
+	margin-bottom: 60px
+	&_head
+		font-size: 24px
+	&_txt
+		padding-bottom: 25px
+		padding-top: 12px
+	&_logo
+		background: url(../img/banner_logo.svg) no-repeat
+		width: 100%
+		height: 33px
+		background-size: contain
+	&_wheel
+		background: url(../img/banner_wheel.png) no-repeat
+		width: 349px
+		height: 455px
+	.star-rating
+		font-size: 0
+		margin-top: 35px
+		display: inline-block
+		padding-bottom: 20px
+	
+	.star-rating__wrap
+		display: inline-block
+		font-size: 16px
+	
+	.star-rating__wrap:after
+		content: ""
+		display: table
+		clear: both
+	
+	.star-rating__ico
+		float: right
+		padding-left: 2px
+		cursor: pointer
+		color: #fff
+		font-size: 16px
+		margin-right: 9px
+	
+	.star-rating__ico:last-child
+		padding-left: 0
+
+	.star-rating__input
+		display: none
+	
+.star-rating__ico:hover:before, .star-rating__ico:hover ~ .star-rating__ico:before, .star-rating__input:checked ~ .star-rating__ico:before
+	content: "\f005"
+	color: $accent
+	transition: all ease 0.3s
+ /* Style the list */
+ul.breadcrumb 
+	list-style: none
+	text-align: right
+	font-family: $default-font
+
+
+/* Display list items sie by side */
+ul.breadcrumb li 
+	display: inline
+	font-size: 14px
+
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before 
+	padding: 6px
+	color: #404041
+	content: "\f105"
+	font-size: 12px
+
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a 
+	color: #404041
+	font-size: 14px
+	text-decoration: none
+	font-family: $default-font
+
+
+/* Add a color on mouse-over */
+ul.breadcrumb li:last-child span
+	color: #000000
+	text-transform: uppercase
+	font-family: $default-font
+.txt_align_r
+	text-align: right
+.separator
+	height: 1px
+	width: 100%
+	margin-top: 33px
+	margin-bottom: 40px
+	background-color: #d2d2d2
+	&.margin_low
+		margin-top: 15px
+		margin-bottom: 15px
+.main
+	color: $txt_color
+	&_filter
+		padding-left: 40px
+		display: inline-block
+		text-align: right
+		color: $txt_color
+		font-weight: 500
+		line-height: 54px
+		position: relative
+		font-size: 18px		
+		&:before
+			content: ''
+			background: url(../img/main_filter.svg) no-repeat
+			height: 16px;
+			width: 24px;
+			position: absolute
+			left: 0
+			bottom: 19px
+	&_wheel
+		border: 1px solid #d2d2d2
+		height: 731px
+		position: relative
+		&_img
+			width: 100%
+			height: 567px
+			border-radius: 4px
+			position: absolute
+			bottom: 0
+			background-repeat: no-repeat !important
+			background-size: contain !important
+			background-position: bottom center !important
+	&_futures_list
+		margin-bottom: 17px
+		li
+			display: inline-block
+			margin-right: 20px
+			&.frst
+				width: 24px
+				height: 24px
+				background: url(../img/main_futures_list.png) no-repeat
+				background-image: -webkit-image-set(url(img/main_futures_list.png) 1x, url(img/main_futures_list@2x.png) 2x, url(img/main_futures_list@3x.png) 3x)
+			&.scnd
+				width: 34px
+				height: 14px
+				background: url(../img/main_futures_list2.png) no-repeat
+				background-image: -webkit-image-set(url(img/main_futures_list2.png) 1x, url(img/main_futures_list2@2x.png) 2x, url(img/main_futures_lis2t@3x.png) 3x)
+				margin-bottom: 4px
+		&_bold
+			font-weight: 500
+			padding-bottom: 20px
+			display: block
+			&.inline
+				display: inline
+			&.float_l
+				float: left
+				padding: 8px 11px 0px 0px
+			&.float_r
+				float: right
+				padding: 8px 11px 0px 0px
+		&_link
+			color: #d2d2d2
+			text-decoration: underline
+			font-size: 14px
+			&:hover
+				text-decoration: none
+	&_discounts
+			display: inline-block
+			margin: 20px 0
+			padding-left: 40px
+			position: relative
+			margin-right: 27px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+			&.first:before
+				width: 28px
+				height: 16px
+				position: absolute
+				background: url(../img/main_discounts.png) no-repeat
+				background-image: -webkit-image-set(url(img/main_discounts.png) 1x, url(img/main_discounts@2x.png) 2x, url(img/main_discounts@3x.png) 3x)
+			&.scnd:before
+				width: 16px
+				height: 16px
+				position: absolute
+				top: 3px
+				background: url(../img/main_discounts3.png) no-repeat
+				background-image: -webkit-image-set(url(img/main_discounts3.png) 1x, url(img/main_discounts3@2x.png) 2x, url(img/main_discounts3@3x.png) 3x)
+			&.thrd:before
+				width: 16px
+				height: 16px
+				left: 6px
+				top: 2px
+				position: absolute
+				background: url(../img/main_discounts2.png) no-repeat
+				background-image: -webkit-image-set(url(img/main_discounts2.png) 1x, url(img/main_discounts2@2x.png) 2x, url(img/main_discounts2@3x.png) 3x)
+			&:nth-child(2n)
+				margin-right: 0
+	form
+		padding: 14px 29px
+		background-color: rgba(216, 216, 216, 0.4)
+		border-radius: 4px
+		padding-bottom: 30px
+		.quantity
+			font-size: 14px
+			display: inline-block
+			&-plus,&-minus
+				padding: 10px 10px
+				color: $txt_color
+				background-color: #fff
+				font-size: 14px
+				display: inline-block
+				cursor: pointer
+				border-top-left-radius: 20px
+				border-bottom-left-radius: 20px
+				float: left
+				text-align: center
+			&-plus
+				border-top-left-radius: 0px
+				border-bottom-left-radius: 0px
+				border-top-right-radius: 20px
+				border-bottom-right-radius: 20px
+				padding-left: 0
+			&-minus
+				padding-right: 0
+			&-input
+				background-color: #fff
+				float: left
+				input[type="text"]
+					text-align: center
+					border: none
+					border-left: 1px solid #e8e7e7
+					border-right: 1px solid #e8e7e7
+					width: 25px
+					margin: 12px 7px
+					font-size: 14px
+					border-radius: 0	
+		.price
+			padding-left: 30px
+		.price2
+			font-size: 24px
+.tabs
+	&_list
+		margin-top: 36px
+		text-align: center
+		margin-bottom: 40px
+		width: calc(100% - 30px)
+		margin-left: auto
+		margin-right: auto
+		li
+			display: inline-block
+			cursor: pointer
+			border-bottom: 1px solid #d2d2d2
+			padding: 0 80px
+			color: #404041
+			opacity: 0.8
+			font-size: 18px
+			padding-bottom: 15px
+			width: calc(100%/4)
+			font-weight: 500
+			&.active
+				font-size: 24px 
+				color: #000000
+				opacity: 1
+				padding-bottom: 8px
+				border-bottom: 6px solid $accent
+	&_checkbox
+		border-bottom: 1px solid #d2d2d2
+		border-right: 1px solid #d2d2d2
+	&_address
+		padding: 0px
+		max-height: 465px
+		overflow-y: hidden
+		border-right: 1px solid #d2d2d2
+		padding-left: 15px
+		margin-left: -15px
+		&_block
+			border-radius: 4px
+			background-color: #f1f1f1
+			padding: 25px
+			font-size: 14px
+			margin-bottom: 20px
+			transition: all ease 0.3s
+			&:first-child
+				margin-top: 30px
+			&:hover
+				box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.3)
+				transform: scale(1.02, 1.02);
+			&_head
+				font-size: 18px
+				font-weight: 500
+				padding-bottom: 10px
+			&_price_block
+				padding-top: 20px
+			&_price
+				font-size: 18px
+				font-weight: 500
+				display: inline-block
+				padding-top: 5px
+				float: left
+			&_but
+				display: inline-block
+				padding: 10px 50px
+				float: right
+	&_map
+		margin-left: -15px;
+		&_frame
+			height: 579px
+			width: 100%
+			&_point
+				display: inline-block
+				position: relative
+				padding-left: 25px
+				margin-right: 24px
+				margin-bottom: 27px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					background: url(../img/tabs_map_frame_point.jpg) no-repeat
+					width: 20px
+					height: 20px
+					top: 2px
+				&.point2
+					padding-left: 17px
+					&:before
+						background: url(../img/tabs_map_frame_point2.jpg) no-repeat
+						width: 12px
+						height: 14px
+						top: 5px
+
+.tires
+	margin-top: 55px
+	margin-bottom: 50px
+	h2
+		padding-bottom: 30px
+	&_block
+		padding: 23px 29px
+		padding-bottom: 0
+		font-size: 14px
+		transition: all ease 0.3s
+		margin-bottom: 30px
+		border-radius: 4px
+		&_img
+			width: 100%
+			height: 250px
+			background-repeat: no-repeat !important
+			background-size: contain !important
+			background-position: bottom center
+		h2
+			text-transform: uppercase
+		&_specif
+			padding: 8px 0
+			&:before
+
+		&_txt
+			padding-bottom: 23px
+		.button
+			margin: 0 -29px
+			border-radius: 0
+			font-size: 16px
+			display: block
+			visibility: hidden
+			border-bottom-right-radius: 4px
+			border-bottom-left-radius: 4px
+		&:hover
+			box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.3)
+			transform: scale(1.02, 1.02);
+			.button
+				visibility: visible
+
+
+
+
+
+
+
+.mCSB_scrollTools .mCSB_draggerContainer 
+	right: -1px
+.mCSB_scrollTools
+	right: -7px
+.mCustomScrollBox
+	padding-left: 15px
+	margin-left: -15px
+	max-width: initial
+.mCSB_inside > .mCSB_container 
+	padding-right: 15px
+	overflow-x: visible
+	margin-right: 0
+	padding-left: 15px
+	margin-left: -15px
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail 
+    background-color: transparent
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+	background-color: #8b8b8b
+@import "media" // Всегда в конце
